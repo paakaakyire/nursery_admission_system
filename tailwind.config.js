@@ -12,9 +12,9 @@ module.exports = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      // screens: {
+      //   "2xl": "1400px",
+      // },
     },
     extend: {
       colors: {
@@ -26,6 +26,13 @@ module.exports = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        screens: {
+          desktop: {'max': '1024px'},
+           tablet: {'max': '768px'},
+           mobile: {'max': '576px'},
+           sMobile: {'max': '400px'},
+           smallphones: {'max': '376px'},
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
