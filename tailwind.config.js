@@ -2,19 +2,19 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
   ],
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
-      // screens: {
-      //   "2xl": "1400px",
-      // },
+      screens: {
+        "2xl": "1400px",
+      },
     },
     extend: {
       colors: {
@@ -26,13 +26,6 @@ module.exports = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-        },
-        screens: {
-          desktop: {'max': '1024px'},
-           tablet: {'max': '768px'},
-           mobile: {'max': '576px'},
-           sMobile: {'max': '400px'},
-           smallphones: {'max': '376px'},
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -78,7 +71,16 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+
+      screens: {
+        desktop: { max: "1024px" },
+        tablet: { max: "768px" },
+        Mtablet: { max: "635px" },
+        Mobile: { max: "576px" },
+        sMobile: { max: "400px" },
+        Exmobile: { max: "360px" },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
