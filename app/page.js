@@ -1,29 +1,13 @@
 "use client";
 
-import * as React from "react";
-import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 import Link from "next/link";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Footer, Navbar } from "./components";
 
-import image from "@/public/assets/bg.jpg";
-
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
-export default function CarouselPlugin() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
-
+export default function Home() {
   return (
     <section className="section">
+      <Navbar />
       <main className="flex justify-center items-center pt-[10rem]">
         <div className="text-center">
           <h1 className="capitalize font-bold text-[4rem] mb-4 text-[#ffffff] leading-[4rem] Mobile:text-[2rem]">
@@ -42,6 +26,7 @@ export default function CarouselPlugin() {
         </div>
         {/* <div className="right"></div> */}
       </main>
+      {/* <Footer /> */}
     </section>
   );
 }

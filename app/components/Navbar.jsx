@@ -7,6 +7,7 @@ import { MdMenu } from "react-icons/md";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -14,6 +15,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Logout from "../logout";
+// import MobileNav from "@/components/MobileNav";
 
 const Navbar = () => {
   const { user, error, isLoading } = useUser();
@@ -86,11 +88,10 @@ const Navbar = () => {
             </div>
           )}
         </div>
-
         {/* mobile screen */}
         <div className="hidden Mobile:flex">
           <Sheet>
-            <SheetTrigger>
+            <SheetTrigger asChild>
               <MdMenu size={24} className="cursor-pointer" />
             </SheetTrigger>
             <SheetContent>
@@ -101,13 +102,15 @@ const Navbar = () => {
                 <SheetDescription>
                   <li className="flex flex-col items-center gap-[4rem] mb-[2rem]">
                     {navbarLinks.map((item) => (
-                      <Link
-                        className="text-[1.1rem] hover:text-blue-500 hover:transition-all hover:duration-300 hover:ease-in-out"
-                        href={item.link}
-                        key={item.name}
-                      >
-                        {item.name}
-                      </Link>
+                      <SheetClose asChild>
+                        <Link
+                          className="text-[1.1rem] hover:text-blue-500 hover:transition-all hover:duration-300 hover:ease-in-out"
+                          href={item.link}
+                          key={item.name}
+                        >
+                          {item.name}
+                        </Link>
+                      </SheetClose>
                     ))}
                   </li>
                   <div className="flex items-center justify-center">
