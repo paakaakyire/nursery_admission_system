@@ -118,3 +118,10 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* input_group */
+.input_group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

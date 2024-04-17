@@ -21,8 +21,8 @@ export const navbarLinks = [
     link: "/gallery",
   },
   {
-    name: "Blog",
-    link: "/blog",
+    name: "Register",
+    link: "/register",
   },
   {
     name: "Contact",
