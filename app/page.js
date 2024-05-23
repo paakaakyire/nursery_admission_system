@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Footer, Navbar } from "./components";
+import { Footer, Navbar } from "./shared";
 
 export default function Home() {
   return (
@@ -14,8 +14,8 @@ export default function Home() {
             Welcome to delany academy
           </h1>
           <p className="text-[1.1rem] font-normal mb-8 text-[#ffffff]">
-            We embrace our student to learn more in our to archieve a better
-            success.
+            We embrace our student to learn more in our school to archieve a
+            better grade in future.
           </p>
           <Link
             href={"/"}

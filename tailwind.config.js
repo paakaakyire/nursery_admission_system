@@ -79,6 +79,7 @@ module.exports = {
         Mobile: { max: "576px" },
         sMobile: { max: "400px" },
         Exmobile: { max: "360px" },
+        smallMobile: { max: "320px" },
       },
     },
   },
