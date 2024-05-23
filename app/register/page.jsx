@@ -8,8 +8,11 @@ const formSchema = z.object({
   username: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
-  username: z.string().min(2, {
-    message: "Password must be at least 8 characters.",
+  nickname: z.string().min(2, {
+    message: "Nickname must be at least 8 characters.",
+  }),
+  password: z.string().min(2, {
+    message: "password must be at least 8 characters.",
   }),
 });
 
@@ -19,6 +22,7 @@ const Register = () => {
     defaultValues: {
       username: "",
       password: "",
+      nickname: "",
     },
   });
 
@@ -41,6 +45,15 @@ const Register = () => {
             type="text"
             {...form.register("username")}
             placeholder="username"
+            className="ring-[2px] ring-gray-200 px-0.5 py-[0.6rem] rounded"
+          />
+        </div>
+        <div className="flex flex-col gap-1  mb-[0.6rem]">
+          <label>NickName</label>
+          <input
+            type="text"
+            {...form.register("nickname")}
+            placeholder="gordey@"
             className="ring-[2px] ring-gray-200 px-0.5 py-[0.6rem] rounded"
           />
         </div>
