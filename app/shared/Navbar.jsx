@@ -102,7 +102,7 @@ const Navbar = () => {
                 <SheetDescription>
                   <li className="flex flex-col items-center gap-[4rem] mb-[2rem]">
                     {navbarLinks.map((item) => (
-                      <SheetClose asChild>
+                      <SheetClose asChild key={item.name}>
                         <Link
                           className="text-[1.1rem] hover:text-blue-500 hover:transition-all hover:duration-300 hover:ease-in-out"
                           href={item.link}
